@@ -34,6 +34,3 @@ If you have any questions or suggestions regarding the Swimming Fitness project,
 - Linkedin: [Luis Miguel Vargas Garrido](https://www.linkedin.com/in/luis-miguel-vargas-garrido-1743a0114/)
 
 Happy swimming and stay fit!
-```
-
-Feel free to modify the content as needed and add any additional sections or information specific to your project.
