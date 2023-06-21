@@ -1,6 +1,3 @@
-Certainly! Here's a sample README file for the Swimming-Fitness repository:
-
-```
 # Swimming Fitness
 
 Welcome to the Swimming Fitness project! This repository contains the source code for an application that helps swimmers track their fitness progress and provides various training resources.
