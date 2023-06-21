@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,16 +20,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-dxi*vdc4k5r-f5-)i4+t6f&hv_wy0q5b*n-a#+qai6w+4!+%%o'
-
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'swimming-fitness-backend-production.up.railway.app',
+    'localhost',
+    'http://localhost:3000',
+    '127.0.0.1',
+]
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://127.0.0.1',
+    'https://swimming-fitness.up.railway.app',
 ]
 CORS_ALLOWED_CREDENTIALS = True
 # Application definition
@@ -108,8 +113,12 @@ WSGI_APPLICATION = 'back.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD':str(os.getenv('PGPASSWORD')),
+        'HOST': 'containers-us-west-18.railway.app',
+        'PORT': '6768',
     }
 }
 
@@ -156,7 +165,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "accounts.CustomUser"
-
 import os
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
