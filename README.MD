@@ -1,5 +1,9 @@
 Welcome to the Swimming Fitness project! This repository contains the source code for an application that helps swimmers track their fitness progress and provides various training resources.
 
+Checkout their original repositories:
+Frontend: https://github.com/tandemresistentia/Swimming-Fitness-Frontend
+Backend: https://github.com/tandemresistentia/Swimming-Fitness-Backend
+
 Features
 - Track swimming sessions: Log your swimming sessions, including distance, duration, and strokes.
 - Progress tracking: Monitor your fitness progress over time with insightful charts and statistics.
