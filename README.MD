@@ -1,5 +1,3 @@
-Update this with new technologies like Django, Django Rest Framework, Swimming Fitness, React, Redux, Firebase, Chart.js, and CSS.
-
 Welcome to the Swimming Fitness project! This repository contains the source code for an application that helps swimmers track their fitness progress and provides various training resources.
 
 Features
