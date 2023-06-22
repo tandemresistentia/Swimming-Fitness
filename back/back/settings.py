@@ -190,14 +190,18 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-from .constants import EMAIL_HOST_PASSWORD
-
+try:
+    from .constants import EMAIL_HOST_PASSWORD
+except:
+    pass
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtppro.zoho.eu'
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
 
 EMAIL_HOST_USER = 'support@valoriado.com'
-EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+try:
+    EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+except:
+    EMAIL_HOST_PASSWORD = str(os.getenv('EMAIL_HOST_PASSWORD'))
 DEFAULT_FROM_EMAIL = 'support@valoriado.com'
