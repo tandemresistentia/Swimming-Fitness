@@ -1,5 +1,8 @@
 Welcome to the Swimming Fitness project! This repository contains the source code for an application that helps swimmers track their fitness progress and provides various training resources.
 
+The website is live right now if you want to test it out! 
+https://swimming-fitness.up.railway.app/
+
 Checkout the repositories:
 - Frontend: https://github.com/tandemresistentia/Swimming-Fitness-Frontend
 - Backend: https://github.com/tandemresistentia/Swimming-Fitness-Backend
